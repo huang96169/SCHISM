@@ -1,0 +1,18 @@
+###ORNL cades
+
+set (SCHISM_EXE_BASENAME pschism_CADES CACHE STRING "Base name (modules and file extension to be added of the executable. If you want a machine name, add it here")
+
+###Relative paths won't work
+#set(MPI_INCLUDE_PATH /software/dev_tools/swtree/cs400_centos7.2_pe2016-08/openmpi/1.10.3/centos7.2_gnu5.3.0/include/ CACHE PATH "Path to mpi include" )
+set(CMAKE_Fortran_COMPILER gfortran CACHE PATH "Path to serial Fortran compiler")
+set(CMAKE_C_COMPILER gcc CACHE PATH "Path to serial C compiler")
+set(NetCDF_BIN_DIR /software/dev_tools/swtree/cs400_centos7.2_pe2016-08/netcdf/4.3.3.1/centos7.2_gnu5.3.0/bin/ CACHE PATH "Path to NetCDF bin and config")
+#set(HDF5_DIR   /some/override/path CACHE PATH "Path to HDF5")
+set(NetCDF_FORTRAN_DIR /software/dev_tools/swtree/cs400_centos7.2_pe2016-08/netcdf/4.3.3.1/centos7.2_gnu5.3.0/netcdf-fortran-4.4.2/ CACHE PATH "Path to NetCDF Fortran library")
+set(NetCDF_C_DIR /software/dev_tools/swtree/cs400_centos7.2_pe2016-08/netcdf/4.3.3.1/centos7.2_gnu5.3.0/ CACHE PATH "Path to NetCDF C library")
+#set(CMAKE_Fortran_FLAGS_RELEASE "-O2 -xCORE-AVX2" CACHE STRING "Fortran flags" FORCE)
+set(NetCDF_INCLUDE_DIR /software/dev_tools/swtree/cs400_centos7.2_pe2016-08/netcdf/4.3.3.1/centos7.2_gnu5.3.0/include/ CACHE PATH "Path to NetCDF include")
+#Compiler flags for gfortran
+set(CMAKE_Fortran_FLAGS_RELEASE "-O2 -ffree-line-length-none -static-libgfortran -finit-local-zero" CACHE STRING "Fortran flags" FORCE)
+
+
